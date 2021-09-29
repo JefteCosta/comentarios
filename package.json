@@ -35,7 +35,9 @@
   },
   "config": {
     "commitizen": {
-      "path": "@commitlint/prompt"
+      
+        "path": "cz-conventional-changelog"
+      
     }
   },
   "dependencies": {
