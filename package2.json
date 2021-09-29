@@ -1,0 +1,62 @@
+{
+  "name": "comentarios",
+  "version": "0.3.0",
+  "description": "sistema backend da wsuite",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "standard-version",
+    "commit": "cz",
+    "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
+      "pre-commit": "git cz"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JefteCosta/w-api.git"
+  },
+  "author": "JefteCosta <jefteamorim@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JefteCosta/w-api/issues"
+  },
+  "homepage": "https://github.com/JefteCosta/w-api#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^7.0.1",
+    "standard-version": "^9.3.1",
+    "nodemon": "^2.0.12"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "bcrypt-node": "^0.1.0",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.19.0",
+    "consign": "^0.1.6",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jwt-simple": "^0.5.6",
+    "knex": "^0.95.10",
+    "moment": "^2.29.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.0",
+    "node-schedule": "^2.0.0",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "pm2": "^5.1.1"
+  }
+}
